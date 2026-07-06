@@ -119,13 +119,14 @@ function initFaqAccordions() {
  * Highlight Page Locations inside Nav Bar
  */
 function highlightActivePage() {
-    const trackingPath = window.location.pathname;
-    const documentName = trackingPath.substring(trackingPath.lastIndexOf('/') + 1);
+    const trackingPath = window.location.pathname.toLowerCase();
     const connectionLinks = document.querySelectorAll('.nav-link');
     
     connectionLinks.forEach(link => {
-        const TargetAttribute = link.getAttribute('href');
-        if (documentName === TargetAttribute || (documentName === '' && TargetAttribute === 'index.html')) {
+        const targetAttribute = link.getAttribute('href').toLowerCase();
+        
+        // If path ends with the href string, or handles the root index fallback cleanly
+        if (trackingPath.endsWith(targetAttribute) || (trackingPath.endsWith('/') && targetAttribute === 'index.html')) {
             link.classList.add('active');
             link.setAttribute('aria-current', 'page');
         } else {
