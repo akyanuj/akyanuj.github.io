@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ Center - SpendingSnap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <nav class="navbar" aria-label="Main navigation Resource Layout">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <svg class="brand-icon" viewBox="0 0 24 24"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5 0.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                <span>SpendingSnap</span>
+            </a>
+            <button class="hamburger" id="hamburgerMenu" aria-label="Toggle Navigation">
+                <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+                <li><a href="delete-account.html" class="nav-link">Delete Account</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="terms.html" class="nav-link">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero" style="padding-bottom: 40px;">
+            <h1>Need Help? We've<br><span>Got Your Back.</span></h1>
+            <p>Find quick answers below or open an official tracking issue to get directly in touch with our team.</p>
+        </header>
+
+        <section class="accordion-group reveal">
+            <h2 class="section-title" style="font-size:1.75rem; margin-bottom:32px;">Frequently Asked Questions</h2>
+            
+            <div class="accordion-item">
+                <button class="accordion-trigger">
+                    <span>How notification detection works?</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        SpendingSnap uses the Android <code>NotificationListenerService</code> to safely detect incoming banking confirmation alerts locally on your device. It extracts relevant transaction values and text descriptions instantly without transmitting text strings to external data hubs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger">
+                    <span>How receipt scanning works?</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        When you select a screenshot from payment gateways like GPay, PhonePe, or Paytm, our integrated Google ML Kit OCR layer processes the image text. This operation runs completely on your device to build tracking entries without uploading raw media files anywhere.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger">
+                    <span>How to restore backup data files?</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        Your account transaction parameters are safely synchronized using encrypted Firebase rules. Simply log back into your verified account on any authorized mobile device to immediately restore your historical ledger history.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger">
+                    <span>How to delete my data record files?</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        You can immediately trigger complete profile removal under user settings inside the active mobile app, or walk through the steps on our dedicated <a href="delete-account.html">Account Deletion Web Page</a>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger">
+                    <span>How to report software bugs?</span>
+                    <svg class="accordion-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        Please open an active issue tracker detailing your runtime error on our official GitHub Repository platform, or reach out directly to support@spendingsnap.placeholder.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal" style="text-align: center; margin-bottom: 96px;">
+            <div class="card" style="max-width: 500px; margin: 0 auto; padding: 40px;">
+                <h3>Still Stuck? Connect Directly</h3>
+                <p style="margin-bottom:24px;">Submit support inquiries, operational feedback, or account request reviews through our transparent issue tracker.</p>
+                <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">Open GitHub Support Ticket</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 SpendingSnap Help Desk Platform.</p>
+                <p><a href="index.html" style="color:var(--md-primary); text-decoration:none;">Home</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
